@@ -1,6 +1,6 @@
 const mysql= require('mysql');
-const {database}=require('./keys');
-const {promisify}=require('util');
+const { database }=require('./keys');
+const { promisify }=require('util');
 const pool=mysql.createPool(database);
 pool.getConnection((err,connection)=>{
     if (err) {
@@ -8,17 +8,17 @@ pool.getConnection((err,connection)=>{
             console.err('coneccion con la base de datos cerrada');
             
         }
-        else if (err.code==='ER_CON_COUNT_ERROR') {
+        if (err.code==='ER_CON_COUNT_ERROR') {
             console.err('Base de daots tiene demasiadas conecciones');
         }
-        else if (err.code==='ECONNREFUSED') {
+        if (err.code==='ECONNREFUSED') {
             console.err('coneccion a base de datos a sido rechazada ');
         }
     }
     else if (connection) {
         connection.release();
-        console.log('DB esta conectado');
-    }
+    }        
+    console.log('DB esta conectado');
     return;
     
 });
