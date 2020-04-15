@@ -29,9 +29,9 @@ app.use((req,res,next)=>{
 //rutas
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
-app.use('/links',require('./routes/links'));
+app.use('/links',require('./routes/roles'));
 //public
-app.use(express.static(path.join(__dirname),'public'));
+app.use(express.static(path.join(__dirname,'public')));
 //comenzar server
 app.listen(app.get('port'),()=>{
     console.log('Server on port: ',app.get('port'));
