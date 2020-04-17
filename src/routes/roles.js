@@ -20,6 +20,7 @@ const pool = require('../database');
     }
     else{
         await pool.query('INSERT INTO rol set ?',[newRol]);
+        req.flash('guardado','Guardado correctamente');
         res.redirect('/roles');
      }
    
@@ -33,6 +34,7 @@ router.get('/delete/:id',async(req,res)=>{
     const {id} = req.params;
     // await pool.query("update rol set estado='*' where id=?",[id]);
     await pool.query("delete from rol where id=?",[id]);
+    req.flash('guardado','rol eliminado satisfactoriamente')
     res.redirect('/roles');
 })
 router.get('/edit/:id',async(req,res)=>{
@@ -57,11 +59,13 @@ router.post('/edit/:id',async(req,res)=>{
         }
         else{
             await pool.query("update rol set ? where id=?",[rol,id]);
+            req.flash('guardado','rol editado satisfactoriamente')
             res.redirect('/roles');
         }
     }
     else{
         await pool.query("update rol set ? where id=?",[rol,id]);
+        req.flash('guardado','rol editado satisfactoriamente')
         res.redirect('/roles');
     }
 })
