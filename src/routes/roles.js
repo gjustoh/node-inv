@@ -12,11 +12,17 @@ const pool = require('../database');
         estado
      }; 
      await pool.query('INSERT INTO rol set ?',[newRol]);
-     res.send('recibido');
+     res.redirect('/roles');
  })
 router.get('/',async(req,res)=>{
     const roles=await pool.query('select * from rol');
-    console.log(roles);
     res.render('roles/list',{roles});
+});
+router.get('/delete/:id',async(req,res)=>{
+    const {id} = req.params;
+    // await pool.query("update rol set estado='*' where id=?",[id]);
+    await pool.query("delete from rol where id=?",[id]);
+    res.redirect('/roles');
 })
+
 module.exports = router; 

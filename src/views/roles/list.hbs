@@ -4,22 +4,31 @@
             <div class="col-md-3">
                 <div class="card text-center">
                     <div class="card-body">
-                        <a href="">
-                            <h3 class="card-title text-uppercase">
+                        
+                            <h3 id="estado" class="card-title text-uppercase">
                                 {{name}}
                             </h3>
-                        </a>
-                        <h5 class="card-text">
-                            {{#ifEquals estado  'A'}}
-                                ACTIVADO
-                            {{else}}
-                                DESACTIVADO
-                            {{/ifEquals}}
+                        <h5  class="card-text">Estado: 
+                            {{#switch  estado }} 
+                                {{#case  "A"  }} Activo {{/case }} 
+                                {{#case  "I"  break=true}} Inactivo{{/case }} 
+                                {{#case  "*"  break=true}} Eliminado {{/case }} 
+                            {{/switch }}
+
                         </h5>
+                        <br>
+                        <a href="/roles/delete/{{id}}" class="btn btn-danger">Eliminar rol</a>
+                        <a href='' class="btn btn-secondary">Editar</a>
                     </div>
                 </div>
             </div>
-
+        {{else}}
+            <div class="col-md4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay roles creados</p>
+                    <a href="roles/add">Crear rol</a>
+                </div>
+            </div>
         {{/each}}
     </div>
 </div>
