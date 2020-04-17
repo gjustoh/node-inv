@@ -11,8 +11,19 @@ const pool = require('../database');
         name,
         estado
      }; 
-     await pool.query('INSERT INTO rol set ?',[newRol]);
-     res.redirect('/roles');
+    const roles=await pool.query("select * from rol where name=?",[name]);
+    let rolesTotal=roles.length;
+ 
+     if(rolesTotal>0){
+        
+        res.render('roles/add');
+    }
+    else{
+        await pool.query('INSERT INTO rol set ?',[newRol]);
+        res.redirect('/roles');
+     }
+   
+    
  })
 router.get('/',async(req,res)=>{
     const roles=await pool.query('select * from rol');
@@ -24,5 +35,34 @@ router.get('/delete/:id',async(req,res)=>{
     await pool.query("delete from rol where id=?",[id]);
     res.redirect('/roles');
 })
-
+router.get('/edit/:id',async(req,res)=>{
+    const {id} = req.params;
+    const rol=await pool.query("select * from rol where id=?",[id]);
+    res.render('roles/edit',{rol: rol[0]});
+})
+router.post('/edit/:id',async(req,res)=>{
+    const {id} = req.params;
+    const{name,estado} = req.body;
+    const rol={
+        name,estado
+    };
+    
+    const roles=await pool.query("select * from rol where name=?",[name]);
+    const nameActOld=await pool.query("select * from rol where id=?",[id]);
+    let rolesTotal=roles.length;
+    if(nameActOld[0].name!=name){
+        if(rolesTotal>0){
+            res.send("rol ya existe");
+            // ('rol ya existe')
+        }
+        else{
+            await pool.query("update rol set ? where id=?",[rol,id]);
+            res.redirect('/roles');
+        }
+    }
+    else{
+        await pool.query("update rol set ? where id=?",[rol,id]);
+        res.redirect('/roles');
+    }
+})
 module.exports = router; 
