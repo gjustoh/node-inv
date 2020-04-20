@@ -1,0 +1,129 @@
+<div class="main-bg">
+    <!-- title -->
+    <h1>Triple Forms</h1>
+    <!-- //title -->
+    <div class="sub-main-w3">
+        <div class="image-style">
+
+        </div>
+        <!-- vertical tabs -->
+        <div class="vertical-tab ">
+            <div id="section1" class="section-w3ls">
+                <input type="radio" name="sections" id="option1" checked>
+                <label id="label" for="option1" class="icon-left-w3pvt"><span class="fa fa-user-circle"
+                        aria-hidden="true"></span>Login</label>
+                <article>
+                    <form action="/signup" method="post">
+                        <h3 class="legend">Login Here</h3>
+                        <div class="input">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            <input type="email" placeholder="Email" name="email" required />
+                        </div>
+                        <div class="input">
+                            <span class="fa fa-key" aria-hidden="true"></span>
+                            <input type="password" placeholder="Password" name="password" required />
+                        </div>
+                        <button type="submit" class="btn submit">Login</button>
+                        <a href="#" class="bottom-text-w3ls">Forgot Password?</a>
+                    </form>
+                </article>
+            </div>
+            <div id="section2" class="section-w3ls form">
+                <input type="radio" name="sections" id="option2">
+                <label id="label" for="option2" class="icon-left-w3pvt"><span class="fa fa-pencil-square"
+                        aria-hidden="true"></span>Register</label>
+                <article>
+                    <form action="/signup" method="post">
+                        <h3 class="legend">Register Here</h3>
+                        {{!-- select roles --}}
+                        <label id="img_category_label" class="field" for="img_category" data-value="">
+                            <span>Rol</span>
+                            <div id="img_category" class="psuedo_select" name="img_category">
+                                <span class="selected"></span>
+                                <ul id="img_category_options" class="options">
+                                    <li class="option" data-value="admin">Administrador</li>
+                                    <li class="option" data-value="usuario">Usuario</li>
+
+                                </ul>
+                            </div>
+                        </label>
+                        <input type='hidden' name="rol" value="admin">
+
+                        {{!-- Nombres --}}
+                        <div class="input">
+                            <span class="fa fa-signature" aria-hidden="true"></span>
+                            <input type="text" placeholder="Nombre" name="nombre" required />
+                        </div>
+                        {{!-- Apellidos --}}
+                        <div class="input">
+                            <span class="fa fa-signature" aria-hidden="true"></span>
+                            <input type="text" placeholder="Apellidos" name="apellido" required />
+                        </div>
+                        {{!-- Direccion --}}
+                        <div class="input">
+                            <span class="fa fa-signature" aria-hidden="true"></span>
+                            <input type="textarea" placeholder="Direccion" name="direccion" required />
+                        </div>
+                        {{!-- Telefono --}}
+                        <div class="input">
+                            <span class="fa fa-phone" aria-hidden="true"></span>
+                            <input type="tel" id="phone" name="telefono" placeholder="telefono" required />
+                        </div>
+                        {{!-- Email --}}
+                        <div class="input">
+                            <span class="fa fa-at" aria-hidden="true"></span>
+                            <input type="email" placeholder="Email" name="email" placeholder="email" required />
+                        </div>
+                        {{!-- Passwords --}}
+                        <div class="input">
+                            <span class="fa fa-key" aria-hidden="true"></span>
+                            <input type="password" placeholder="Password" name="contraseña" required />
+                        </div>
+                        <div class="input">
+                            <span class="fa fa-key" aria-hidden="true"></span>
+                            <input type="password" placeholder="Confirm Password" name="password" required />
+                        </div>
+
+                        {{!-- imagen --}}
+                        <div class="input">
+                            <span class="fa fa-images" aria-hidden="true"></span>
+                            <input type="text" placeholder="Imagen url" name="imagen" required />
+                        </div>
+                        {{!-- Estado --}}
+
+                        <input type='hidden' name="estado" value="A">
+                        <button type="submit" class="btn submit">Register</button>
+                    </form>
+                </article>
+            </div>
+            <div id="section3" class="section-w3ls">
+                <input type="radio" name="sections" id="option3">
+                <label id="label" for="option3" class="icon-left-w3pvt"><span class="fa fa-lock"
+                        aria-hidden="true"></span>Forgot
+                    Password?</label>
+                <article>
+                    <form action="#" method="post">
+                        <h3 class="legend last">Reset Password</h3>
+                        <p class="para-style">Enter your email address below and we'll send you an email with
+                            instructions.</p>
+                        <p class="para-style-2"><strong>Need Help?</strong> Learn more about how to <a href="#">retrieve
+                                an existing
+                                account.</a></p>
+                        <div class="input">
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            <input type="email" placeholder="Email" name="email" required />
+                        </div>
+                        <button type="submit" class="btn submit last-btn">Reset</button>
+                    </form>
+                </article>
+            </div>
+        </div>
+        <!-- //vertical tabs -->
+        <div class="clear"></div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
+
+<script src="/js/login.js"></script>
+{{!-- <script src="/js/textarea.js"></script> --}}

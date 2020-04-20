@@ -44,7 +44,7 @@ app.use((req,res,next)=>{
 })
 //rutas
 app.use(require('./routes'));
-app.use('/login',require('./routes/authentication'));
+app.use(require('./routes/authentication'));
 app.use('/roles',require('./routes/roles'));
 //public
 app.use(express.static(path.join(__dirname,'public')));
