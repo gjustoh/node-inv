@@ -36,7 +36,7 @@
                     <form action="/signup" method="post">
                         <h3 class="legend">Register Here</h3>
                         {{!-- select roles --}}
-                        <label id="img_category_label" class="field" for="img_category" data-value="">
+                        {{!-- <label id="img_category_label" class="field" for="img_category" data-value="">
                             <span>Rol</span>
                             <div id="img_category" class="psuedo_select" name="img_category">
                                 <span class="selected"></span>
@@ -47,8 +47,14 @@
                                 </ul>
                             </div>
                         </label>
-                        <input type='hidden' name="rol" value="admin">
-
+                        <input type='hidden' name="rol" value="admin"> --}}
+                        <div class="form-group">
+                            <label for="rol">Rol</label>
+                            <select class="rol form-control" id="rol" name="rol_id">
+                                <option value="1">Administrador</option>
+                                <option value="36">Usuario</option>
+                            </select>
+                        </div>
                         {{!-- Nombres --}}
                         <div class="input">
                             <span class="fa fa-signature" aria-hidden="true"></span>
@@ -57,7 +63,7 @@
                         {{!-- Apellidos --}}
                         <div class="input">
                             <span class="fa fa-signature" aria-hidden="true"></span>
-                            <input type="text" placeholder="Apellidos" name="apellido" required />
+                            <input type="text" placeholder="Apellidos" name="apellidos" required />
                         </div>
                         {{!-- Direccion --}}
                         <div class="input">
@@ -77,17 +83,17 @@
                         {{!-- Passwords --}}
                         <div class="input">
                             <span class="fa fa-key" aria-hidden="true"></span>
-                            <input type="password" placeholder="Password" name="contraseña" required />
+                            <input type="password" placeholder="Password" name="password" required />
                         </div>
                         <div class="input">
                             <span class="fa fa-key" aria-hidden="true"></span>
-                            <input type="password" placeholder="Confirm Password" name="password" required />
+                            <input type="text" placeholder="Confirm Password" name="Lpassword" required />
                         </div>
 
                         {{!-- imagen --}}
                         <div class="input">
                             <span class="fa fa-images" aria-hidden="true"></span>
-                            <input type="text" placeholder="Imagen url" name="imagen" required />
+                            <input type="text" placeholder="Imagen url" name="skin_url" required />
                         </div>
                         {{!-- Estado --}}
 

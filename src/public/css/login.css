@@ -5,7 +5,9 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
+
 /* reset */
+
 html,
 body,
 div,
@@ -131,7 +133,9 @@ table {
     border-spacing: 0;
 }
 
+
 /* start editing from here */
+
 a {
     text-decoration: none;
 }
@@ -140,65 +144,90 @@ a {
     text-align: right;
 }
 
+
 /* text align right */
+
 .txt-lt {
     text-align: left;
 }
 
+
 /* text align left */
+
 .txt-center {
     text-align: center;
 }
 
+
 /* text align center */
+
 .float-rt {
     float: right;
 }
 
+
 /* float right */
+
 .float-lt {
     float: left;
 }
 
+
 /* float left */
+
 .clear {
     clear: both;
 }
 
+
 /* clear float */
+
 .pos-relative {
     position: relative;
 }
 
+
 /* Position Relative */
+
 .pos-absolute {
     position: absolute;
 }
 
+
 /* Position Absolute */
+
 .vertical-base {
     vertical-align: baseline;
 }
 
+
 /* vertical align baseline */
+
 .vertical-top {
     vertical-align: top;
 }
 
+
 /* vertical align top */
+
 nav.vertical ul li {
     display: block;
 }
 
+
 /* vertical menu */
+
 nav.horizontal ul li {
     display: inline-block;
 }
 
+
 /* horizontal menu */
+
 img {
     max-width: 100%;
 }
+
 
 /* //end reset */
 
@@ -217,7 +246,9 @@ body {
     min-height: 100vh;
 }
 
+
 /* title */
+
 h1 {
     font-size: 3vw;
     color: #fff;
@@ -227,6 +258,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 600;
 }
+
 
 /* //title */
 
@@ -246,7 +278,9 @@ h1 {
     min-height: 371px;
 }
 
+
 /* vertical tabs */
+
 .vertical-tab {
     color: #333;
     display: block;
@@ -284,7 +318,8 @@ h1 {
     color: #111;
     text-align: center;
 }
-.label{
+
+.label {
     /* /* background: #fff; */
     display: block;
     font-size: 17px;
@@ -295,6 +330,7 @@ h1 {
     color: #111;
     text-align: center;
 }
+
 .vertical-tab .section-w3ls article {
     display: none;
     left: 230px;
@@ -302,6 +338,7 @@ h1 {
     position: absolute;
     top: 0;
 }
+
 
 /* .vertical-tab .section-w3ls article:after {
     background-color: #fff;
@@ -331,9 +368,12 @@ h1 {
     margin-bottom: 7.8px;
 }
 
+
 /* //vertical tabs */
 
+
 /* form style */
+
 .sub-main-w3 form {
     background: #ffff;
     padding: 2em;
@@ -365,9 +405,11 @@ p.para-style-2 a {
     color: blue;
 }
 
+
 /* select y Textarea */
 
-label.field ,label.textarea {
+label.field,
+label.textarea {
     border-radius: 2px;
     color: #666;
     display: block;
@@ -379,7 +421,9 @@ label.field ,label.textarea {
     transition-property: opacity;
     z-index: 1;
 }
-label.field  span ,label.textarea span {
+
+label.field span,
+label.textarea span {
     color: inherit;
     display: block;
     font-size: 16px;
@@ -393,7 +437,9 @@ label.field  span ,label.textarea span {
     transition-property: color, font-size, top;
     z-index: 1;
 }
-label.field span.required::after , label.textarea span.required::after{
+
+label.field span.required::after,
+label.textarea span.required::after {
     color: inherit;
     content: "*";
     display: block;
@@ -405,10 +451,14 @@ label.field span.required::after , label.textarea span.required::after{
     top: 0;
     width: 20px;
 }
-.error label.field span ,.error label.textarea  {
+
+.error label.field span,
+.error label.textarea {
     color: #f02318;
 }
-label.field .psuedo_select, label.textarea .psuedo_select {
+
+label.field .psuedo_select,
+label.textarea .psuedo_select {
     background: rgba(255, 255, 255, 0);
     position: relative;
     border-color: #666;
@@ -425,7 +475,9 @@ label.field .psuedo_select, label.textarea .psuedo_select {
     outline: 0;
     z-index: 1;
 }
-label.field .psuedo_select::after, label.textarea .psuedo_select::after  {
+
+label.field .psuedo_select::after,
+label.textarea .psuedo_select::after {
     background: url("data:image/svg+xml; utf8,<svg fill='#666' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'> <path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/> <path d='M0-.75h24v24H0z' fill='none'/> </svg>"), no-repeat;
     content: "";
     height: 24px;
@@ -435,7 +487,9 @@ label.field .psuedo_select::after, label.textarea .psuedo_select::after  {
     right: 0;
     transition-property: background;
 }
-label.field .psuedo_select .selected, label.textarea .psuedo_select .selected{
+
+label.field .psuedo_select .selected,
+label.textarea .psuedo_select .selected {
     height: 24px;
     left: 1px;
     line-height: 24px;
@@ -446,7 +500,9 @@ label.field .psuedo_select .selected, label.textarea .psuedo_select .selected{
     transition-property: opacity, transform;
     will-change: transform;
 }
-label.field .psuedo_select ul , label.textarea .psuedo_select ul {
+
+label.field .psuedo_select ul,
+label.textarea .psuedo_select ul {
     background: #fff;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     display: block;
@@ -461,11 +517,15 @@ label.field .psuedo_select ul , label.textarea .psuedo_select ul {
     width: 100%;
     z-index: 2;
 }
-label.field .psuedo_select ul li , label.textarea .psuedo_select ul li {
+
+label.field .psuedo_select ul li,
+label.textarea .psuedo_select ul li {
     height: 32px;
     padding: 8px 4px;
 }
-label.field .deselect, label.textarea .deselect {
+
+label.field .deselect,
+label.textarea .deselect {
     height: 100vh;
     left: 0;
     position: fixed;
@@ -473,24 +533,35 @@ label.field .deselect, label.textarea .deselect {
     width: 100vw;
     z-index: -1;
 }
-label.field.focused, label.textarea.focused {
+
+label.field.focused,
+label.textarea.focused {
     color: #007bed;
 }
-label.field.focused .psuedo_select, label.textarea.focused .psuedo_select{
+
+label.field.focused .psuedo_select,
+label.textarea.focused .psuedo_select {
     border-color: #007bed;
 }
-label.field.focused .psuedo_select::after,label.textarea.focused .psuedo_select::after{
+
+label.field.focused .psuedo_select::after,
+label.textarea.focused .psuedo_select::after {
     background: url("data:image/svg+xml; utf8,<svg fill='#007BED' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'> <path d='M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z'/> <path d='M0-.75h24v24H0z' fill='none'/> </svg>"), no-repeat;
 }
-label.field.focused .psuedo_select ul,label.textarea.focused .psuedo_select ul {
+
+label.field.focused .psuedo_select ul,
+label.textarea.focused .psuedo_select ul {
     opacity: 1;
     pointer-events: all;
 }
 
+
 /* fin select */
-label.textarea .psuedo_select .options{
+
+label.textarea .psuedo_select .options {
     opacity: 0;
 }
+
 .input {
     margin-bottom: 1em;
     padding: 13px 15px;
@@ -563,9 +634,12 @@ a.bottom-text-w3ls {
     margin-top: 3.2em;
 }
 
+
 /* //form style */
 
+
 /* copyright */
+
 .copyright {
     margin-top: 9vw;
     padding-bottom: 1.5vw;
@@ -598,9 +672,12 @@ a.bottom-text-w3ls {
     transition: 0.5s all;
 }
 
+
 /* //copyright */
 
+
 /* responsive */
+
 @media(max-width: 1080px) {
     h1 {
         font-size: 4vw;
@@ -611,16 +688,13 @@ a.bottom-text-w3ls {
     .sub-main-w3 {
         max-width: 900px;
     }
-
     .vertical-tab .section-w3ls article {
         min-width: 445px;
     }
-
     p.para-style-2 {
         font-size: 14px;
         margin-bottom: 1em;
     }
-
     p.para-style {
         margin-bottom: .7em;
         font-size: 14px;
@@ -631,18 +705,15 @@ a.bottom-text-w3ls {
     .sub-main-w3 {
         max-width: 768px;
     }
-
     .vertical-tab .section-w3ls article {
         min-width: 400px;
         left: 175px;
     }
-
     .vertical-tab .section-w3ls #label {
         width: 134px;
         font-size: 15px;
         padding: 34px 20px;
     }
-
     h1 {
         font-size: 5vw;
         padding: 4.5vw 1vw 1vw;
@@ -658,14 +729,12 @@ a.bottom-text-w3ls {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
-
     .image-style {
         float: none;
         width: 100%;
         min-height: 300px;
         order: 2;
     }
-
     .vertical-tab {
         float: none;
         width: 100%;
@@ -688,18 +757,15 @@ a.bottom-text-w3ls {
     .sub-main-w3 {
         max-width: 500px;
     }
-
     .vertical-tab .section-w3ls article {
         min-width: 365px;
         left: 135px;
     }
-
     .vertical-tab .section-w3ls #label {
         width: 114px;
         font-size: 15px;
         padding: 31px 10px;
     }
-
     h1 {
         font-size: 7vw;
     }
@@ -710,54 +776,42 @@ a.bottom-text-w3ls {
         min-width: 291px;
         left: 109px;
     }
-
     .vertical-tab .section-w3ls #label {
         width: 89px;
         font-size: 14px;
         padding: 26.8px 10px;
     }
-
     .sub-main-w3 {
         max-width: 400px;
     }
-
     .image-style {
         min-height: 220px;
     }
-
     .sub-main-w3 form {
         padding: 1.5em;
     }
-
     .submit {
         font-size: 14px;
     }
-
     .input input {
         font-size: 13px;
     }
-
     p.para-style {
         margin-bottom: .4em;
         font-size: 13px;
     }
-
     p.para-style-2 {
         font-size: 13px;
     }
-
     .input {
         padding: 12px 12px;
     }
-
     a.bottom-text-w3ls {
         margin-top: 3em;
     }
-
     .last-btn {
         margin: 1em auto 0;
     }
-
     .copyright h2 {
         font-size: 12px;
     }
@@ -767,11 +821,9 @@ a.bottom-text-w3ls {
     .sub-main-w3 {
         max-width: 320px;
     }
-
     .vertical-tab .section-w3ls article {
         position: static;
     }
-
     .vertical-tab .section-w3ls #label {
         width: 100%;
         font-size: 14px;
@@ -780,48 +832,102 @@ a.bottom-text-w3ls {
         border-bottom: 1px solid #dcdcdc;
         border-top: 1px solid #dcdcdc;
     }
-
     .vertical-tab input[name="sections"]:checked+#label {
         border-right: none;
         border-bottom: 1px solid #000;
         border-top: none;
     }
-
     .image-style {
         min-height: 190px;
     }
-
     h1 {
         font-size: 1.8em;
         padding: 6.5vw 1vw 3vw;
     }
-
     .copyright h2 {
         font-size: 13px;
     }
-
     .last-btn {
         margin: 1.5em auto 0;
     }
-
     p.para-style {
         margin-bottom: 1em;
     }
-
     p.para-style-2 {
         margin-bottom: 2em;
     }
-
 }
 
 @media(max-width: 320px) {
     .sub-main-w3 {
         max-width: 270px;
     }
-
     .vertical-tab .section-w3ls article {
         min-width: 270px;
     }
 }
 
+
 /* //responsive */
+
+.caja {
+    margin: 20px;
+    border: 1px solid #d9d9d9;
+    height: 30px;
+    overflow: hidden;
+    width: 230px;
+    position: relative;
+}
+
+select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.caja::after {
+    content: "\025be";
+    display: table-cell;
+    padding-top: 7px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    pointer-events: none;
+}
+
+
+/* Chart.js */
+
+@-webkit-keyframes chartjs-render-animation {
+    from {
+        opacity: 0.99
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes chartjs-render-animation {
+    from {
+        opacity: 0.99
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.chartjs-render-monitor {
+    -webkit-animation: chartjs-render-animation 0.001s;
+    animation: chartjs-render-animation 0.001s;
+}
