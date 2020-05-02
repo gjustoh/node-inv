@@ -66,6 +66,13 @@ passport.serializeUser((user, done) => {
 });
 passport.deserializeUser(async(id, done) => {
     console.log(id);
-    const row = await pool.query('select * from usuario where id=?', [id]);
+    const row = await pool.query('select id,rol_id,nombre,apellidos,direccion,telefono,email,skin_url, estado from usuario where id=?', [id]);
+    const rola = await pool.query('select name from rol where id=?', [row[0].rol_id]);
+    rols = {
+        rol: rola[0]
+    }
+    row[0].rol = rola[0].name;
+    delete row[0].rol_id;
+    console.log(row)
     done(null, row[0]);
 });

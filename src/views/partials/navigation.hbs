@@ -13,10 +13,10 @@
         <img class="img-responsive img-rounded" src="/img/user.jpg" alt="User picture">
       </div>
       <div class="user-info">
-        <span class="user-name">Jhon
-          <strong>Smith</strong>
+        <span class="user-name">{{user.nombre}}
+          <strong>{{user.apellidos}}</strong>
         </span>
-        <span class="user-role">Administrator</span>
+        <span class="user-role"><h3>{{user.rol}}</h3></span>
         <span class="user-status">
           <i class="fa fa-circle"></i>
           <span>Online</span>
@@ -298,7 +298,7 @@
       </div>
     </div>
     <div>
-      <a href="#">
+      <a href="/logout">
         <i class="fa fa-power-off"></i>
       </a>
     </div>

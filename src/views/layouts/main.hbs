@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    {{#if user}}
     {{>message}}
     <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#"><i class="fas fa-bars"></i></a>
@@ -29,12 +30,13 @@
         <main class="page-content pt-2">
             <div id="overlay" class="overlay"></div>
             <div class="container-fluid p-5">
-                
+
 
                 {{{body}}}
             </div>
         </main>
     </div>
+
     {{!-- SCRIPTS --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 
@@ -51,6 +53,11 @@
         crossorigin="anonymous"></script>
 
     <script src="/js/main.js"></script>
+{{else}}
+{{{body}}}
+    {{/if}}
+    
+
 </body>
 
 </html>
