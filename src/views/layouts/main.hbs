@@ -19,16 +19,17 @@
 </head>
 
 <body>
+    {{>message}}
     <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#"><i class="fas fa-bars"></i></a>
         <a id="pin-sidebar" class="setting btn-sm btn-dark" href="#">
             <i class="fas fa-cog"></i>
         </a>
-        {{> navigation}}
+        {{>navigation}}
         <main class="page-content pt-2">
             <div id="overlay" class="overlay"></div>
             <div class="container-fluid p-5">
-                {{> message}}
+                
 
                 {{{body}}}
             </div>

@@ -45,7 +45,8 @@ app.use(passport.session());
 
 app.use((req, res, next) => {
         app.locals.success = req.flash('guardado');
-
+        app.locals.error = req.flash('error');
+        app.locals.user = req.user;
         next();
     })
     //rutas

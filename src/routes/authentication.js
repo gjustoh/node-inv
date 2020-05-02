@@ -9,6 +9,7 @@ router.get('/signup', (req, res) => {
     res.render('login/signup');
 
 });
+
 router.post('/signup',
     passport.authenticate('local.signup', {
         successRedirect: '/profile',
@@ -16,5 +17,16 @@ router.post('/signup',
         failureFlash: true
     }));
 router.get('/profile', (req, res) => {
-    res.send("profile");
-})
+    res.render("perfil");
+});
+router.post('/signin', (req, res, next) => {
+    passport.authenticate('local.signin', {
+        successRedirect: '/profile',
+        failureRedirect: '/signin',
+        failureFlash: 'true'
+    })(req, res, next);
+
+});
+router.get('/signin', (req, res) => {
+    res.render('login/signin')
+});
