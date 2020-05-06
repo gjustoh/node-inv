@@ -53,6 +53,7 @@ app.use((req, res, next) => {
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/roles', require('./routes/roles'));
+app.use('/products', require('./routes/products'));
 //public
 app.use(express.static(path.join(__dirname, 'public')));
 //comenzar server

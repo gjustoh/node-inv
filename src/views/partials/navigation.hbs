@@ -16,7 +16,9 @@
         <span class="user-name">{{user.nombre}}
           <strong>{{user.apellidos}}</strong>
         </span>
-        <span class="user-role"><h3>{{user.rol}}</h3></span>
+        <span class="user-role">
+          <h3>{{user.rol}}</h3>
+        </span>
         <span class="user-status">
           <i class="fa fa-circle"></i>
           <span>Online</span>
@@ -50,15 +52,15 @@
           </a>
           <div class="sidebar-submenu">
             <ul>
-              <li>
+              <li id="li">
                 <a href="#">Dashboard 1
                   <span class="badge badge-pill badge-success">Pro</span>
                 </a>
               </li>
-              <li>
+              <li id="li">
                 <a href="#">Dashboard 2</a>
               </li>
-              <li>
+              <li id="li">
                 <a href="#">Dashboard 3</a>
               </li>
             </ul>
@@ -67,21 +69,34 @@
         <li class="sidebar-dropdown">
           <a href="#">
             <i class="fa fa-shopping-cart"></i>
-            <span class="menu-text">E-commerce</span>
+            <span class="menu-text">Productos</span>
             <span class="badge badge-pill badge-danger">3</span>
           </a>
           <div class="sidebar-submenu">
             <ul>
-              <li>
-                <a href="/products">Productos
+              <li id="subsubmenu">
 
+                <a href="#"><i class="fa fa-sitemap"></i>
+                  <span class="menu-text">Categorias</span>
                 </a>
+                <div class="sidebar-submenu" id="desplegar">
+                  <ul>
+                    <li id="li">
+                      <a href="/products/category">lista
+
+                      </a>
+                    </li>
+                    <li id="li">
+                      <a href="/products/category/add">Agregar categoria</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
-              <li>
-                <a href="#">Orders</a>
+              <li id="li">
+                <a href="#">Lista</a>
               </li>
-              <li>
-                <a href="#">Credit cart</a>
+              <li id="li">
+                <a href="#">Agregar producto</a>
               </li>
             </ul>
           </div>
@@ -93,10 +108,10 @@
           </a>
           <div class="sidebar-submenu">
             <ul>
-              <li>
+              <li id="li">
                 <a href="/roles">Lista</a>
               </li>
-              <li>
+              <li id="li">
                 <a href="/roles/add">Agregar nuevo</a>
               </li>
             </ul>
@@ -109,16 +124,16 @@
           </a>
           <div class="sidebar-submenu">
             <ul>
-              <li>
+              <li id="li">
                 <a href="#">Pie chart</a>
               </li>
-              <li>
+              <li id="li">
                 <a href="#">Line chart</a>
               </li>
-              <li>
+              <li id="li">
                 <a href="#">Bar chart</a>
               </li>
-              <li>
+              <li id="li">
                 <a href="#">Histogram</a>
               </li>
             </ul>
@@ -131,10 +146,10 @@
           </a>
           <div class="sidebar-submenu">
             <ul>
-              <li>
+              <li id="li">
                 <a href="#">Google maps</a>
               </li>
-              <li>
+              <li id="li">
                 <a href="#">Open street map</a>
               </li>
             </ul>
