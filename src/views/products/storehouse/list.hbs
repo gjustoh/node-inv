@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each categorias}}
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        
+                            <h3 id="estado" class="card-title text-uppercase">
+                                {{name}}
+                            </h3>
+                        <h5  class="card-text">Estado: 
+                            {{#switch  estado }} 
+                                {{#case  "A"  }} Activo {{/case }} 
+                                {{#case  "I"  break=true}} Inactivo{{/case }} 
+                                {{#case  "*"  break=true}} Eliminado {{/case }} 
+                            {{/switch }}
+
+                        </h5>
+                        <br>
+                        <a href="/products/category/delete/{{id}}" class="btn btn-danger">Eliminar Estado</a>
+                        <a href='/products/category/edit/{{id}}' class="btn btn-secondary">Editar</a>
+                    </div>
+                </div>
+            </div>
+        {{else}}
+            <div class="col-md-4 mx-auto">
+                <div class="card card-body text-center">
+                    <p>No hay categoria creada</p>
+                    <a href="/products/category/add">Crear categoria</a>
+                </div>
+            </div>
+        {{/each}}
+        <div class="col-md-3">
+                <div class="card card-body text-center">
+                    <p>Añadir nueva categoria</p>
+                    <a href="/products/category/add"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+    </div>
+</div>

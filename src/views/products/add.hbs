@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="for-control">
+        <label for="departamento" >Departamento</label>
+        <select class="form-control form-control-sm" name="departamento" id="departamento">
+            {{#each departamento}}
+            <option value={{id}}>{{nombre}}</option>
+            {{/each}}
+        </select>
+</BR>
+<label for="provincia">Provincia</label>
+        <select class="form-control form-control-sm" name="provincia" id="provincia" disabled >
+
+            <option></option>
+        </select>
+        <label for="distrito">Distrito</label>
+        <select class="form-control form-control-sm" name="distrito"id="distrito" disabled >
+
+            <option></option>
+        </select>
+    </div>
+</div>
