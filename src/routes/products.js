@@ -42,7 +42,7 @@ router.get('/distrito', async(req, res) => {
 
 //almacenes
 router.get('/storeouse', (req, res) => {
-    res.render('products/storehouse/add');
+    res.render('products/storehouse/list');
 });
 
 router.get('/storeouse/add', (req, res) => {
@@ -52,7 +52,7 @@ router.post('/storeouse/add', (req, res) => {
     res.render('products/storehouse/add');
 });
 router.get('/storeouse/delete/:id', (req, res) => {
-    res.render('products/storehouse/add');
+    res.render('products/storehouse');
 });
 router.get('/storeouse/edit:id', (req, res) => {
     res.render('products/storehouse/add');
